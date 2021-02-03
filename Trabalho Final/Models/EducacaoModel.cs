@@ -23,11 +23,11 @@ namespace Trabalho_Final.Models
 
         [Required]
         [StringLength(10)]
-        [Display(Name = "Data de Início")]
+        [Display(Name = "Início")]
         public string Data_Inicio { get; set; }
 
         [StringLength(10)]
-        [Display(Name = "Data de Fim")]
+        [Display(Name = "Fim")]
         public string Data_Fim { get; set; }
     }
 }
