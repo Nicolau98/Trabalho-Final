@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Trabalho_Final.Models.Educacao>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1></h1>
+<h3>Educação e formação</h3>
+
+<p>
+    <a class="btn btn-outline-dark" asp-action="Create">Criar</a>
+</p>
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Local)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data_Inicio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data_Fim)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Local)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descricao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Data_Inicio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Data_Fim)
+                </td>
+                <td>
+                    <a class="btn btn-outline-dark text-white" asp-action="Edit" asp-route-id="@item.EducacaoId">Editar</a> |
+                    <a class="btn btn-outline-dark text-white"  asp-action="Details" asp-route-id="@item.EducacaoId">Detalhes</a> |
+                    <a class="btn btn-outline-dark text-white" asp-action="Delete" asp-route-id="@item.EducacaoId">Apagar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
