@@ -17,5 +17,7 @@ namespace Trabalho_Final.Data
         public DbSet<Trabalho_Final.Models.Experiencia> Experiencia { get; set; }
 
         public DbSet<Trabalho_Final.Models.Lingua> Lingua { get; set; }
+
+        public DbSet<Trabalho_Final.Models.CartaConducao> CartaConducao { get; set; }
     }
 }

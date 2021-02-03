@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Trabalho_Final.Models.CartaConducao>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1></h1>
+<h3>Carta de Condução</h3>
+
+<p>
+    <a type="button" class="btn btn-outline-dark" asp-action="Create">Criar</a>
+</p>
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Tipo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tipo)
+                </td>
+                <td>
+                    <a type="button" class="btn btn-outline-dark text-white" asp-action="Edit" asp-route-id="@item.CartaConducaoId">Editar</a> |
+                    <a type="button" class="btn btn-outline-dark text-white" asp-action="Delete" asp-route-id="@item.CartaConducaoId">Apagar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
