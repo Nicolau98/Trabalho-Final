@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Trabalho_Final.Models.Experiencia>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1></h1>
+<h3>Experiência Profissional</h3>
+
+<p>
+    <a type="button" class="btn btn-outline-dark" asp-action="Create">Criar</a>
+</p>
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data_Inicio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data_Fim)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Data_Inicio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Data_Fim)
+                </td>
+                <td>
+                    <a type="button" class="btn btn-outline-dark text-white" asp-action="Edit" asp-route-id="@item.ExperienciaId">Editar</a> |
+                    <a type="button" class="btn btn-outline-dark text-white" asp-action="Details" asp-route-id="@item.ExperienciaId">Detalhes</a> |
+                    <a type="button" class="btn btn-outline-dark text-white" asp-action="Delete" asp-route-id="@item.ExperienciaId">Apagar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
