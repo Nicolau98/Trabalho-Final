@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Trabalho_Final.Data;
 
 namespace Trabalho_Final.Migrations
 {
     [DbContext(typeof(Trabalho_FinalContext))]
-    partial class Trabalho_FinalContextModelSnapshot : ModelSnapshot
+    [Migration("20210203161017_Nao")]
+    partial class Nao
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
