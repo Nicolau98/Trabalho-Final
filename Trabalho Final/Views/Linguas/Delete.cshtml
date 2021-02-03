@@ -1,0 +1,57 @@
+﻿@model Trabalho_Final.Models.Lingua
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1></h1>
+<h3>Apagar</h3>
+
+<h5>Tem a certeza que deseja apagar?</h5>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Coral)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Coral)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Leitura)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Leitura)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Poral)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Poral)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ioral)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ioral)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Escrita)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Escrita)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="LinguaId" />
+        <input type="submit" value="Apagar" class="btn btn-danger" /> |
+        <a asp-action="Index" class="btn btn-outline-dark">Cancelar</a>
+    </form>
+</div>

@@ -1,0 +1,58 @@
+﻿@model Trabalho_Final.Models.Lingua
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1></h1>
+<h3>Criar</h3>
+
+<hr />
+<div class="row">
+    <div class="col-md">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label"></label>
+                <input asp-for="Nome" class="form-control" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Coral" class="control-label"></label>
+                <input asp-for="Coral" class="form-control" />
+                <span asp-validation-for="Coral" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Leitura" class="control-label"></label>
+                <input asp-for="Leitura" class="form-control" />
+                <span asp-validation-for="Leitura" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Poral" class="control-label"></label>
+                <input asp-for="Poral" class="form-control" />
+                <span asp-validation-for="Poral" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ioral" class="control-label"></label>
+                <input asp-for="Ioral" class="form-control" />
+                <span asp-validation-for="Ioral" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Escrita" class="control-label"></label>
+                <input asp-for="Escrita" class="form-control" />
+                <span asp-validation-for="Escrita" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-outline-dark" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-outline-dark">Cancelar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

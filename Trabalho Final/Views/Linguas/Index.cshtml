@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Trabalho_Final.Models.Lingua>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1></h1>
+<h3>Línguas</h3>
+
+<p>
+    <a type="button" class="btn btn-outline-dark" asp-action="Create">Criar</a>
+</p>
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Coral)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Leitura)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Poral)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ioral)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Escrita)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Coral)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Leitura)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Poral)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ioral)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Escrita)
+                </td>
+                <td>
+                    <a type="button" class="btn btn-outline-dark text-white" asp-action="Edit" asp-route-id="@item.LinguaId">Editar</a> |
+                    @*<a type="button" class="btn btn-outline-dark text-white" asp-action="Details" asp-route-id="@item.LinguasId">Details</a> |*@
+                    <a type="button" class="btn btn-outline-dark text-white" asp-action="Delete" asp-route-id="@item.LinguaId">Apagar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
