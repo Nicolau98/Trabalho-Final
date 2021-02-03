@@ -64,7 +64,7 @@ namespace Trabalho_Final.Controllers
             }
             
 
-            ViewBag.Mensagem = "Produto adicionado com sucesso.";
+            ViewBag.Mensagem = "Mensagem enviada com sucesso, terá uma resposta dentro de 24 horas";
             return View("Sucesso");
 
         }
