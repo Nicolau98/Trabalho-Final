@@ -1,12 +1,12 @@
 ﻿@model Trabalho_Final.Models.Mensagem
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Contatco";
 }
 
-<h1>Create</h1>
+<h1></h1>
+<h3>Deixe a sua mensagem</h3>
 
-<h4>Mensagem</h4>
 <hr />
 <div class="row">
     <div class="col-md">
@@ -29,18 +29,18 @@
             </div>
             <div class="form-group">
                 <label asp-for="MensagemTexto" class="control-label"></label>
-                <textarea asp-for="MensagemTexto" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <textarea asp-for="MensagemTexto" class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
                 <span asp-validation-for="MensagemTexto" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Enviar" class="btn btn-outline-dark" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a class="btn btn-outline-dark" asp-action="Create">Apagar</a>
 </div>
 
 @section Scripts {

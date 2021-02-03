@@ -25,6 +25,7 @@ namespace Trabalho_Final.Controllers
             return View(await _context.Mensagem.ToListAsync());
         }
 
+
         // GET: Mensagems/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -60,9 +61,12 @@ namespace Trabalho_Final.Controllers
             {
                 _context.Add(mensagem);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
             }
-            return View(mensagem);
+            
+
+            ViewBag.Mensagem = "Produto adicionado com sucesso.";
+            return View("Sucesso");
+
         }
 
         // GET: Mensagems/Edit/5
