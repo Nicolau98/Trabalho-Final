@@ -22,6 +22,25 @@ namespace Trabalho_Final.Controllers
         // GET: Experiencias
         public async Task<IActionResult> Index()
         {
+            //List<Experiencia> Experiencias = await _context.Experiencia.ToListAsync();
+
+            //List<Educacao> Educacaos = await _context.Educacao.ToListAsync();
+
+            //List<Lingua> Linguas = await _context.Lingua.ToListAsync();
+
+            //List<CartaConducao> CartaConducaos = await _context.CartaConducao.ToListAsync();
+
+            //Curriculo modelo = new Curriculo
+            //{
+
+            //    Experiencias = Experiencias,
+            //    Educacaos = Educacaos,
+            //    Linguas = Linguas,
+            //    CartaConducaos = CartaConducaos,
+            //};
+
+            //return base.View(modelo);
+
             return View(await _context.Experiencia.ToListAsync());
         }
 
