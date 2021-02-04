@@ -5,16 +5,42 @@ using System.Linq;
 using System.Threading.Tasks;
 using Trabalho_Final.Models;
 using Trabalho_Final.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace Trabalho_Final.Controllers
 {
     public class CurriculoController : Controller
     {
-        public List<Experiencia> Experiencias { get; internal set; }
+        private readonly Trabalho_FinalContext _context;
 
-        public IActionResult Index()
+        public CurriculoController(Trabalho_FinalContext context)
         {
-            return base.View();
+            _context = context;
+        }
+
+        public async Task<IActionResult> IndexAsync()
+        {
+            List<Experiencia> Experiencias = await _context.Experiencia.ToListAsync();
+
+            List<Educacao> Educacaos = await _context.Educacao.ToListAsync();
+
+            List<Lingua> Linguas = await _context.Lingua.ToListAsync();
+
+            List<CartaConducao> CartaConducaos = await _context.CartaConducao.ToListAsync();
+
+            Curriculo modelo = new Curriculo
+            {
+
+                Experiencias = Experiencias,
+                Educacaos = Educacaos,
+                Linguas = Linguas,
+                CartaConducaos = CartaConducaos,
+            };
+
+            return View(modelo);
+
+
+            
         }
     }
 }

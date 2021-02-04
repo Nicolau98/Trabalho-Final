@@ -14,30 +14,35 @@
                 @Html.DisplayNameFor(model => model.Experiencias[0].Nome)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.Experiencias[0].Descricao)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Experiencias[0].Data_Inicio)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Experiencias[0].Data_Fim)
             </th>
-            <th></th>
         </tr>
     </thead>
-    @*<tbody>
+    <tbody>
             @foreach (var item in Model.Experiencias)
             {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Nome)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Data_Inicio)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Data_Fim)
-                    </td>
-                </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Data_Inicio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Data_Fim)
+            </td>
+        </tr>
             }
-        </tbody>*@
+        </tbody>
 </table>
 
 <h1></h1>
@@ -61,11 +66,10 @@
             <th>
                 @Html.DisplayNameFor(model => model.Educacaos[0].Data_Fim)
             </th>
-            <th></th>
         </tr>
     </thead>
-    @*<tbody>
-            @foreach (var item in Educacao)
+    <tbody>
+            @foreach (var item in Model.Educacaos)
             {
                 <tr>
                     <td>
@@ -83,14 +87,9 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.Data_Fim)
                     </td>
-                    <td>
-                        <a class="btn btn-outline-dark text-white" asp-action="Edit" asp-route-id="@item.EducacaoId">Editar</a> |
-                        <a class="btn btn-outline-dark text-white" asp-action="Details" asp-route-id="@item.EducacaoId">Detalhes</a> |
-                        <a class="btn btn-outline-dark text-white" asp-action="Delete" asp-route-id="@item.EducacaoId">Apagar</a>
-                    </td>
                 </tr>
             }
-        </tbody>*@
+        </tbody>
 </table>
 
 <h1></h1>
@@ -117,11 +116,10 @@
             <th>
                 @Html.DisplayNameFor(model => model.Linguas[0].Escrita)
             </th>
-            <th></th>
         </tr>
     </thead>
-    @*<tbody>
-            @foreach (var item in Model)
+    <tbody>
+            @foreach (var item in Model.Linguas)
             {
                 <tr>
                     <td>
@@ -142,12 +140,9 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.Escrita)
                     </td>
-                    <td>
-                        ton" class="btn btn-outline-dark text-white" asp-action="Delete" asp-route-id="@item.LinguaId">Apagar</a>
-                    </td>
                 </tr>
             }
-        </tbody>*@
+        </tbody>
 </table>
 
 <h1></h1>
@@ -159,21 +154,17 @@
             <th>
                 @Html.DisplayNameFor(model => model.CartaConducaos[0].Tipo)
             </th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
-        @*@foreach (var item in Model)
+        @foreach (var item in Model.CartaConducaos)
         {
             <tr>
                 <td>
                     @Html.DisplayFor(modelItem => item.Tipo)
                 </td>
-                <td>
-                    <a type="button" class="btn btn-outline-dark text-white" asp-action="Edit" asp-route-id="@item.CartaConducaoId">Editar</a> |
-                    <a type="button" class="btn btn-outline-dark text-white" asp-action="Delete" asp-route-id="@item.CartaConducaoId">Apagar</a>
-                </td>
+                
             </tr>
-        }*@
+        }
     </tbody>
 </table>

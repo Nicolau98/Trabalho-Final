@@ -20,6 +20,7 @@ namespace Trabalho_Final.Controllers
             _context = context;
         }
 
+        [Authorize]
         // GET: Linguas
         public async Task<IActionResult> Index()
         {
