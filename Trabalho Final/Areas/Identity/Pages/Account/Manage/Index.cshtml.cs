@@ -33,7 +33,7 @@ namespace Trabalho_Final.Areas.Identity.Pages.Account.Manage
         public class InputModel
         {
             [Phone]
-            [Display(Name = "Phone number")]
+            [Display(Name = "Número de Telemóvel")]
             public string PhoneNumber { get; set; }
         }
 
@@ -88,7 +88,7 @@ namespace Trabalho_Final.Areas.Identity.Pages.Account.Manage
             }
 
             await _signInManager.RefreshSignInAsync(user);
-            StatusMessage = "Your profile has been updated";
+            StatusMessage = "Seu Perfil foi atualizado";
             return RedirectToPage();
         }
     }
