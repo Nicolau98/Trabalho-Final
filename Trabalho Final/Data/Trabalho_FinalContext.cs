@@ -23,5 +23,7 @@ namespace Trabalho_Final.Data
         public DbSet<Trabalho_Final.Models.Educacao> Educacao { get; set; }
 
         public DbSet<Trabalho_Final.Models.Mensagem> Mensagem { get; set; }
+
+        public DbSet<Trabalho_Final.Models.Apresentacao> Apresentacao { get; set; }
     }
 }

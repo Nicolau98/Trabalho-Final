@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Trabalho_Final.Models.Apresentacao>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1></h1>
+<h3>Apresentação</h3>
+
+<div class="row">
+    <div class="col-md-4">
+
+        <section id="slider" class="d-none d-lg-block d-print-block">
+            <img src="~/lib/img/img4.jpg" width="350" height="350" />
+        </section>
+    </div>
+
+    <div class="col-md-6 col-md-offset-2">
+        <h6>Algumas Caracteristícas</h6>
+    </div>
+</div>
+
+        <h1></h1>
+
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Nome)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Nascimento)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Morada)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Texto)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nome)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nascimento)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Morada)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Texto)
+                        </td>
+                        <td>
+                            <a type="button" class="btn btn-outline-dark text-white" asp-action="Edit" asp-route-id="@item.ApresentacaoId">Editar</a> |
+                            <a type="button" class="btn btn-outline-dark text-white" asp-action="Details" asp-route-id="@item.ApresentacaoId">Detalhes</a> |
+                            <a type="button" class="btn btn-outline-dark text-white" asp-action="Delete" asp-route-id="@item.ApresentacaoId">Apagar</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
