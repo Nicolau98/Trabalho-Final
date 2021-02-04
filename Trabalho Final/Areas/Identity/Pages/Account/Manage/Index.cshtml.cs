@@ -22,6 +22,7 @@ namespace Trabalho_Final.Areas.Identity.Pages.Account.Manage
             _signInManager = signInManager;
         }
 
+        [Display(Name = "Nome de utilizador")]
         public string Username { get; set; }
 
         [TempData]
