@@ -113,7 +113,9 @@ namespace Trabalho_Final.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(apresentacao);
+            
+            ViewBag.Mensagem = "Produto alterado com sucesso";
+            return View("Sucesso");
         }
 
         // GET: Apresentacaos/Delete/5
