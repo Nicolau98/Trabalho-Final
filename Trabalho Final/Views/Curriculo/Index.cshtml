@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Trabalho_Final.Models.Curriculo>
+﻿@model Curriculo
 
 @{
     ViewData["Title"] = "Index";
@@ -25,8 +25,8 @@
             <th></th>
         </tr>
     </thead>
-    @*<tbody>
-            @foreach (var item in Model)
+    <tbody>
+            @foreach (var item in Model.Experiencias)
             {
                 <tr>
                     <td>
@@ -38,12 +38,7 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.Data_Fim)
                     </td>
-                    <td>
-                        <a type="button" class="btn btn-outline-dark text-white" asp-action="Edit" asp-route-id="@item.ExperienciaId">Editar</a> |
-                        <a type="button" class="btn btn-outline-dark text-white" asp-action="Details" asp-route-id="@item.ExperienciaId">Detalhes</a> |
-                        <a type="button" class="btn btn-outline-dark text-white" asp-action="Delete" asp-route-id="@item.ExperienciaId">Apagar</a>
-                    </td>
                 </tr>
             }
-        </tbody>*@
+        </tbody>
 </table>
